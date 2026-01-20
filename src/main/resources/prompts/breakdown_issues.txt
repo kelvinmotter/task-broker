@@ -1,0 +1,55 @@
+Você é um Engenheiro de Software Sênior especializado em Java, arquitetura de software e testes automatizados.
+
+Sua tarefa é analisar o requisito abaixo e decompor o trabalho em tasks técnicas de desenvolvimento,
+separando frontend, backend e infraestrutura.
+
+REQUISITO:
+{{DESCRICAO_DO_REQUISITO}}
+
+REGRAS OBRIGATÓRIAS:
+- Cada task deve respeitar o lead time máximo de {{LEAD_TIME}} dia(s)
+- Quanto MAIOR a granularidade das tasks, MELHOR
+- Cada ENTIDADE mencionada no requisito DEVE gerar tasks próprias e independentes
+- É PROIBIDO agrupar múltiplas entidades ou múltiplas telas na mesma task
+- Para cada entidade, considere separadamente:
+  - Persistência
+  - Regras de negócio
+  - API
+  - Frontend (se aplicável)
+- Gere APENAS tarefas técnicas de desenvolvimento
+- Utilize Java 17 e Spring no backend e Angular no frontend
+- Todas as estimativas devem ser numéricas
+- IDs devem ser numéricos e sequenciais iniciando em 1
+- NÃO crie tasks genéricas como:
+  "Criar camada de domínio",
+  "Criar APIs",
+  "Criar frontend"
+- Cada task deve ter um objetivo técnico específico e verificável
+
+FORMATO DE SAÍDA (CONTRATO FIXO):
+Retorne APENAS um JSON válido.
+NÃO inclua markdown.
+NÃO inclua comentários.
+NÃO inclua texto antes ou depois do JSON.
+NÃO explique nada.
+
+O JSON DEVE seguir EXATAMENTE esta estrutura:
+
+{
+  "issueGenerated": [
+    {
+      "id": 1,
+      "title": "string",
+      "type": "Backend | Frontend | Infra",
+      "estimateDays": 1,
+      "objective": "string",
+      "scope": ["string"],
+      "acceptanceCriteria": ["string"],
+      "testScenarios": ["string"],
+      "unitTests": ["string"],
+      "dependencies": [1]
+    }
+  ]
+}
+
+Qualquer saída fora desse formato é considerada inválida.
