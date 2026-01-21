@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.kelvindev</groupId>
-	<artifactId>task-broaker</artifactId>
+	<artifactId>task-broker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>task-broaker</name>
+	<name>task-broker</name>
 	<description>Gerador de task com IA</description>
 	<url/>
 	<licenses>
@@ -84,5 +84,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

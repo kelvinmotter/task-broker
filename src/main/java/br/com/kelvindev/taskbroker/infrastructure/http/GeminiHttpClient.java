@@ -1,4 +1,4 @@
-package br.com.kelvindev.task_broaker.infrastructure.http;
+package br.com.kelvindev.taskbroker.infrastructure.http;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ public class GeminiHttpClient {
     private static final String URL =
             "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent";
 
-    private static final String API_KEY = "SUA_API_KEY";
+    private static final String API_KEY = "API_KEY";
 
     private final HttpClient httpClient;
 

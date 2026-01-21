@@ -1,4 +1,4 @@
-package br.com.kelvindev.task_broaker.dto;
+package br.com.kelvindev.taskbroker.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

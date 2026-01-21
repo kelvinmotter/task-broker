@@ -1,13 +1,14 @@
-package br.com.kelvindev.task_broaker.service;
+package br.com.kelvindev.taskbroker.service;
 
 
-import br.com.kelvindev.task_broaker.component.GeminiPayloadBuilder;
-import br.com.kelvindev.task_broaker.component.GeminiResponseParser;
-import br.com.kelvindev.task_broaker.component.PromptBuilder;
-import br.com.kelvindev.task_broaker.dto.IssueGeneratedDTO;
-import br.com.kelvindev.task_broaker.enums.AIType;
-import br.com.kelvindev.task_broaker.infrastructure.http.GeminiHttpClient;
-import br.com.kelvindev.task_broaker.utils.JsonUtil;
+import br.com.kelvindev.taskbroker.component.GeminiPayloadBuilder;
+import br.com.kelvindev.taskbroker.component.GeminiResponseParser;
+import br.com.kelvindev.taskbroker.component.PromptBuilder;
+import br.com.kelvindev.taskbroker.dto.GenerateDTO;
+import br.com.kelvindev.taskbroker.dto.IssueGeneratedDTO;
+import br.com.kelvindev.taskbroker.enums.AIType;
+import br.com.kelvindev.taskbroker.infrastructure.http.GeminiHttpClient;
+import br.com.kelvindev.taskbroker.utils.JsonUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,8 @@ public class GeminiService implements GenerateAI {
     }
 
     @Override
-    public IssueGeneratedDTO process(String input) {
-        String prompt = promptBuilder.build(input);
+    public IssueGeneratedDTO process(GenerateDTO dto) {
+        String prompt = promptBuilder.build(dto);
         String payload = JsonUtil.toJson(payloadBuilder.build(prompt));
 
         String responseBody = httpClient.post(payload);

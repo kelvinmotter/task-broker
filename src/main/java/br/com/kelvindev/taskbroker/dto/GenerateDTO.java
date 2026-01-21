@@ -1,6 +1,6 @@
-package br.com.kelvindev.task_broaker.dto;
+package br.com.kelvindev.taskbroker.dto;
 
-import br.com.kelvindev.task_broaker.enums.AIType;
+import br.com.kelvindev.taskbroker.enums.AIType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,5 +15,6 @@ public class GenerateDTO {
     private String token;
     private String input;
     private AIType type;
+    private int leadtime;
 
 }

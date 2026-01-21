@@ -1,4 +1,4 @@
-package br.com.kelvindev.task_broaker.record;
+package br.com.kelvindev.taskbroker.record;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

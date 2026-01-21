@@ -1,4 +1,4 @@
-package br.com.kelvindev.task_broaker.component;
+package br.com.kelvindev.taskbroker.component;
 
 import org.springframework.stereotype.Component;
 

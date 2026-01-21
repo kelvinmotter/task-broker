@@ -1,5 +1,6 @@
-package br.com.kelvindev.task_broaker.component;
+package br.com.kelvindev.taskbroker.component;
 
+import br.com.kelvindev.taskbroker.dto.GenerateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,12 +10,11 @@ public class PromptBuilder {
     @Autowired
     private PromptLoaderComponent promptLoader;
 
-    public String build(String description) {
+    public String build(GenerateDTO dto) {
         String template = promptLoader.load("breakdown_issues.txt");
 
         return template
-                .replace("{{stack}}", "Java 17")
-                .replace("{{leadTime}}", "3")
-                .replace("{{requisito}}", description);
+                .replace("{{LEAD_TIME}}", String.valueOf(dto.getLeadtime()))
+                .replace("{{DESCRICAO_DO_REQUISITO}}", dto.getInput());
     }
 }

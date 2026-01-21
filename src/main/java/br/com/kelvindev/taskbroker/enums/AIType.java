@@ -1,4 +1,4 @@
-package br.com.kelvindev.task_broaker.enums;
+package br.com.kelvindev.taskbroker.enums;
 
 public enum AIType {
 

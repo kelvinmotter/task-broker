@@ -1,9 +1,9 @@
-package br.com.kelvindev.task_broaker.controller;
+package br.com.kelvindev.taskbroker.controller;
 
-import br.com.kelvindev.task_broaker.component.AIServiceFactory;
-import br.com.kelvindev.task_broaker.dto.GenerateDTO;
-import br.com.kelvindev.task_broaker.dto.IssueGeneratedDTO;
-import br.com.kelvindev.task_broaker.service.GenerateAI;
+import br.com.kelvindev.taskbroker.component.AIServiceFactory;
+import br.com.kelvindev.taskbroker.dto.GenerateDTO;
+import br.com.kelvindev.taskbroker.dto.IssueGeneratedDTO;
+import br.com.kelvindev.taskbroker.service.GenerateAI;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,7 +25,7 @@ public class IssueController {
     @PostMapping
     public ResponseEntity<IssueGeneratedDTO> generateIssues(@RequestBody GenerateDTO request) {
         GenerateAI ai = aiFactory.get(request.getType());
-        IssueGeneratedDTO response = ai.process(request.getInput());
+        IssueGeneratedDTO response = ai.process(request);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(response);

@@ -40,7 +40,7 @@ O JSON DEVE seguir EXATAMENTE esta estrutura:
     {
       "id": 1,
       "title": "string",
-      "type": "Backend | Frontend | Infra",
+      "type": "Backend | Frontend",
       "estimateDays": 1,
       "objective": "string",
       "scope": ["string"],

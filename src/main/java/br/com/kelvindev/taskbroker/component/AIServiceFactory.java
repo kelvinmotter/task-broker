@@ -1,7 +1,7 @@
-package br.com.kelvindev.task_broaker.component;
+package br.com.kelvindev.taskbroker.component;
 
-import br.com.kelvindev.task_broaker.enums.AIType;
-import br.com.kelvindev.task_broaker.service.GenerateAI;
+import br.com.kelvindev.taskbroker.enums.AIType;
+import br.com.kelvindev.taskbroker.service.GenerateAI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

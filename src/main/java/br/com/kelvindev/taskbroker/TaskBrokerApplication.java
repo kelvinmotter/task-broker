@@ -1,13 +1,13 @@
-package br.com.kelvindev.task_broaker;
+package br.com.kelvindev.taskbroker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication()
-public class TaskBroakerApplication {
+public class TaskBrokerApplication {
 
 	public static void main(String[] args) {
-        SpringApplication.run(TaskBroakerApplication.class, args);
+        SpringApplication.run(TaskBrokerApplication.class, args);
 	}
 
 }

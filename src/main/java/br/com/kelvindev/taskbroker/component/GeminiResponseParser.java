@@ -1,6 +1,6 @@
-package br.com.kelvindev.task_broaker.component;
+package br.com.kelvindev.taskbroker.component;
 
-import br.com.kelvindev.task_broaker.record.GeminiResponse;
+import br.com.kelvindev.taskbroker.record.GeminiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import tools.jackson.databind.ObjectMapper;
